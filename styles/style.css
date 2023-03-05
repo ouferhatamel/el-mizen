@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap");
+@font-face {
+  font-family: "Hacen Tunisa";
+  src: url("../res/fonts/Hacen Tunisia Bold.ttf");
+}
+h1 {
+  font-family: "Hacen Tunisa";
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-weight: 400;
+  color: #e2b668;
+}
+
+p {
+  line-height: 2.5;
+}
+
+section, header {
+  padding: 3.5rem 10rem;
+}
+
+footer {
+  padding: 3.5rem 17rem;
+}
+
+.filledBtn {
+  background-color: #e2b668;
+  color: #15495e;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #e2b668;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filledBtn:hover {
+  background-color: transparent;
+}
+
+.emptyBtn {
+  border: 2px solid #e2b668;
+  border-radius: 50px;
+  color: #15495e;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.emptyBtn:hover {
+  background-color: #15495e;
+  color: #fff7eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #15495e;
+}
+
+@font-face {
+  font-family: "Hacen Tunisa";
+  src: url("../res/fonts/Hacen Tunisia Bold.ttf");
+}
+h1 {
+  font-family: "Hacen Tunisa";
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-weight: 400;
+  color: #e2b668;
+}
+
+p {
+  line-height: 2.5;
+}
+
+section, header {
+  padding: 3.5rem 10rem;
+}
+
+footer {
+  padding: 3.5rem 17rem;
+}
+
+.filledBtn {
+  background-color: #e2b668;
+  color: #15495e;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #e2b668;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filledBtn:hover {
+  background-color: transparent;
+}
+
+.emptyBtn {
+  border: 2px solid #e2b668;
+  border-radius: 50px;
+  color: #15495e;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.emptyBtn:hover {
+  background-color: #15495e;
+  color: #fff7eb;
+}
+
+body {
+  background-color: #fff7eb;
+  color: #15495e;
+  font-family: "cairo";
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo img {
+  width: 6rem;
+}
+nav .navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav .navLinks a {
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+nav .navLinks a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 0;
+  height: 2px;
+  background-color: #e2b668;
+  transition: all 0.3s ease;
+}
+nav .navLinks a:hover::before {
+  width: 100%;
+}
+nav .callBtn {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+nav .callBtn img {
+  width: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+.hero .heroLeft {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.hero .heroRight {
+  flex: 1;
+}
+.hero .heroRight h1 {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+.hero .heroRight p {
+  width: 85%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.hero .circleBgd {
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background-color: #e2b668;
+}
+.hero img {
+  transform: scaleX(-1);
+  width: 23rem;
+  position: absolute;
+  left: 11rem;
+}
+
+.about {
+  display: flex;
+  padding-top: 13rem;
+}
+.about .aboutRight {
+  flex: 1;
+}
+.about .aboutRight .outerCircle {
+  width: 22rem;
+  height: 22rem;
+  border: 2px solid #e2b668;
+  border-radius: 50%;
+  position: relative;
+}
+.about .aboutRight .innerCircle {
+  width: 17rem;
+  height: 17rem;
+  background-color: #e2b668;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about .aboutRight img {
+  width: 19rem;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.about .aboutLeft {
+  flex: 1;
+}
+.about .aboutLeft h2 {
+  width: 45%;
+}
+.about .aboutLeft p {
+  width: 80%;
+  margin: 2rem 0;
+}
+.about .aboutLeft .btns {
+  display: flex;
+  gap: 2rem;
+}
+.about .aboutLeft .btns div {
+  padding: 0.5rem 1.2rem;
+}
+
+.services .serviceHeader {
+  margin-bottom: 3rem;
+}
+.services .serviceHeader p {
+  width: 40%;
+}
+.services .serviceList {
+  display: flex;
+  gap: 3rem;
+}
+.services .column {
+  flex: 1;
+}
+.services .card {
+  aspect-ratio: 1/1;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #e2b668;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.services .card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.services .card p {
+  font-size: 0.8rem;
+}
+.services .card img {
+  height: 3rem;
+}
+.services .card .arrow {
+  width: 1.5rem;
+  margin-top: 1rem;
+}
+.services .card:hover {
+  background-color: #15495e;
+  color: #fff7eb;
+}
+
+.double {
+  background-image: url("../res/images/elmizen-lawflare-image-bgd-ouferhat-amel.jpg");
+  background-color: #15495e;
+  background-blend-mode: multiply;
+  background-size: cover;
+  height: 100vh;
+  margin-top: 20REM;
+}
+.double .contactUs {
+  background-color: #fff7eb;
+  padding: 4rem 7rem;
+  border-radius: 15px;
+  display: flex;
+  transform: translateY(-60%);
+}
+.double .contactRight {
+  flex: 1;
+}
+.double .contactRight p {
+  width: 80%;
+}
+.double .contactLeft {
+  width: 40%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 3rem;
+  border-radius: 15px;
+}
+.double .contactLeft form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.double .contactLeft form input, .double .contactLeft form textarea {
+  background-color: transparent;
+  border: 2px solid #e2b668;
+  outline: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #15495e;
+  font-family: "cairo";
+}
+.double .contactLeft form button {
+  font-family: "cairo";
+}
+.double .testeminies {
+  padding: 7rem;
+  transform: translateY(-75%);
+}
+.double .testeminies h2, .double .testeminies h5, .double .testeminies p {
+  color: #fff7eb;
+}
+.double .testeminies .client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.double .testeminies .client .arrows {
+  display: flex;
+  gap: 2rem;
+}
+.double .testeminies .client img {
+  width: 0.8rem;
+  cursor: pointer;
+}
+
+.blog .boxed {
+  padding: 0 7rem;
+}
+.blog .articles {
+  display: flex;
+  gap: 3rem;
+}
+.blog .card {
+  flex: 1;
+  cursor: pointer;
+}
+.blog .card:nth-child(1) .cardImg {
+  background-image: url("../res/images/elmizen-law-article1-ouferhat-amel.jpg");
+  background-size: cover;
+}
+.blog .card:nth-child(2) .cardImg {
+  background-image: url("../res/images/elmizen-lawflare-image-bgd-ouferhat-amel.jpg");
+  background-size: cover;
+}
+.blog .card:nth-child(3) .cardImg {
+  background-image: url("../res/images/elmizen-law-article2-ouferhat-amel.webp");
+  background-size: cover;
+}
+.blog .card .cardImg {
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+.blog .card .date {
+  background-color: #fff7eb;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  padding: 0.5rem 2rem;
+  border-top-right-radius: 15px;
+  bottom: 0;
+  left: 0;
+}
+.blog .card h5 {
+  font-weight: 400;
+  opacity: 0.7;
+}
+.blog .card p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+.blog .card img {
+  width: 2rem;
+  cursor: pointer;
+}
+.blog .card:hover .cardImg {
+  transform: scale(1.03);
+}
+
+.newsletter .boxed {
+  padding: 0 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter .input {
+  display: flex;
+}
+.newsletter .input input {
+  width: 20rem;
+  border: transparent;
+  outline: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: #15495e;
+  font-family: "cairo";
+  transform: translateX(-2rem);
+}
+.newsletter .input img {
+  width: 2rem;
+  z-index: 10;
+  transform: translateX(1rem);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer .column1 #logo {
+  width: 7rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+footer .column1 .line {
+  display: flex;
+  gap: 1rem;
+}
+footer .column1 .line img {
+  width: 1.5rem;
+}
+footer .column2 {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+footer .column2 li {
+  cursor: pointer;
+}
+footer .column2 li:hover {
+  color: #e2b668;
+}
+footer .column3 .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer .column3 .social img {
+  width: 2rem;
+  cursor: pointer;
+}
+footer .column3 .social img:hover {
+  transform: scale(1.1);
+}
+footer .column3 .social img:nth-child(2) {
+  width: 1.7rem;
+}
+footer .column3 .social img:nth-child(4) {
+  width: 1.5rem;
+}
+footer .column3 h3 {
+  color: #e2b668;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+  .about {
+    padding-top: 20rem;
+  }
+  .about .aboutLeft h2 {
+    width: 60%;
+  }
+}/*# sourceMappingURL=style.css.map */

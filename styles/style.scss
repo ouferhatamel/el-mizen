@@ -1,0 +1,398 @@
+@import 'reset';
+@import 'basics';
+
+body{
+    background-color: $light_clr;
+    color: $dark_clr;
+    font-family: 'cairo';
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        img{
+            width: 6rem;
+        }
+    }
+    .navLinks{
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        a{
+            position: relative;
+            padding-bottom: .8rem;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0%;
+                width: 0;
+                height: 2px;
+                background-color: $middle_clr;
+                transition: all 0.3s ease;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+    .callBtn{
+        display: flex;
+        align-items: flex-end;
+        gap: .8rem;
+        img{
+            width: 1.5rem;
+        }
+    }
+}
+.hero{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    .heroLeft{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+    .heroRight{
+        flex: 1;
+        h1{
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+        p{
+            width: 85%;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+    }
+    .circleBgd{
+        width: 26rem;
+        height: 26rem;
+        border-radius: 50%;
+        background-color: $middle_clr;
+    }
+    img{
+        transform: scaleX(-1);
+        width: 23rem;
+        position: absolute;
+        left: 11rem
+    }
+}
+.about{
+    display: flex;
+    padding-top: 13rem;
+    .aboutRight{
+        flex: 1;
+        .outerCircle{
+            width: 22rem;
+            height: 22rem;
+            border: 2px solid $middle_clr;
+            border-radius: 50%;
+            position: relative;
+        }
+        .innerCircle{
+            width: 17rem;
+            height: 17rem;
+            background-color: $middle_clr;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        img{
+            width: 19rem;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .aboutLeft{
+        flex: 1;
+        h2{
+            width: 45%;
+        }
+        p{
+            width: 80%;
+            margin: 2rem 0;
+        }
+        .btns{
+            display: flex;
+            gap: 2rem;
+            div{
+                padding: .5rem 1.2rem;
+            }
+        }
+    }
+}
+.services{
+    .serviceHeader{
+        margin-bottom: 3rem;
+        p{
+            width: 40%;
+        }
+    }
+    .serviceList{
+        display: flex;
+        gap: 3rem;
+    }
+    .column{
+        flex: 1;
+    }
+    .card{
+        aspect-ratio: 1/1;
+        height: fit-content;
+        border: 1px solid $middle_clr;
+        border-radius: 15px;
+        padding: 2rem 3rem;
+        margin-bottom: 3rem;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3{
+            margin-top: 1rem;
+            margin-bottom: .5rem;
+        }
+        p{
+            font-size: .8rem;
+        }
+        img{
+            height: 3rem;
+        }
+        .arrow{
+            width: 1.5rem;
+            margin-top: 1rem;
+        }
+        &:hover{
+            background-color: $dark_clr;
+            color: $light_clr;
+        }
+    }
+}
+.double{
+    background-image: url('../res/images/elmizen-lawflare-image-bgd-ouferhat-amel.jpg');
+    background-color: $dark_clr;
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 20REM;
+    .contactUs{
+        background-color: $light_clr;
+        padding: 4rem 7rem;
+        border-radius: 15px;
+        display: flex;
+        transform: translateY(-60%);
+    }
+    .contactRight{
+        flex: 1;
+        p{
+            width: 80%;
+        }
+    }
+    .contactLeft{
+        width: 40%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 3rem;
+        border-radius: 15px;
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            input, textarea{
+                background-color: transparent;
+                border: 2px solid $middle_clr;
+                outline: none;
+                border-radius: 5px;
+                padding: .5rem;
+                color: $dark_clr;
+                font-family: 'cairo';
+            }
+            button{
+                font-family: 'cairo';
+            }
+        }
+    }
+    .testeminies{
+        padding: 7rem;
+        transform: translateY(-75%);
+        h2, h5, p{
+            color: $light_clr;
+        }
+        .client{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            .arrows{
+                display: flex;
+                gap: 2rem;
+            }
+            img{
+                width: .8rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.blog{
+    .boxed{
+        padding: 0 7rem;
+    }
+    .articles{
+        display: flex;
+        gap: 3rem;
+    }
+    .card{
+        flex: 1;
+        cursor: pointer;
+        &:nth-child(1) .cardImg {
+            background-image: url('../res/images/elmizen-law-article1-ouferhat-amel.jpg');
+            background-size: cover;
+        }
+        &:nth-child(2) .cardImg {
+            background-image: url('../res/images/elmizen-lawflare-image-bgd-ouferhat-amel.jpg');
+            background-size: cover;
+        }
+        &:nth-child(3) .cardImg {
+            background-image: url('../res/images/elmizen-law-article2-ouferhat-amel.webp');
+            background-size: cover;
+        }
+        .cardImg{
+            aspect-ratio: 1/1;
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        .date{
+            background-color: $light_clr;
+            width: fit-content;
+            position: absolute;
+            padding: .5rem 2rem;
+            border-top-right-radius: 15px;
+            bottom: 0;
+            left: 0;
+        }
+        h5{
+            font-weight: 400;
+            opacity: .7;
+        }
+        p{
+            font-size: .9rem;
+            margin: 1rem 0;
+        }
+        img{
+            width: 2rem;
+            cursor: pointer;
+        }
+        &:hover .cardImg{
+            transform: scale(1.03);
+        }
+    }
+}
+.newsletter{
+    .boxed{
+        padding: 0 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .input{
+        display: flex;
+        input{
+            width: 20rem;
+            border: transparent;
+            outline: none;
+            border-radius: 5px;
+            padding: .5rem 1rem;
+            color: $dark_clr;
+            font-family: 'cairo';
+            transform: translateX(-2rem);
+        }
+        img{
+            width: 2rem;
+            z-index: 10;
+            transform: translateX(1rem);
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .column1{
+        #logo{
+            width: 7rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+        .line{
+            display: flex;
+            gap: 1rem;
+            img{
+                width: 1.5rem;
+            }
+        }
+    }
+    .column2{
+        list-style: none;
+        display: flex;
+        gap: 4rem;
+        li{
+            cursor: pointer;
+            &:hover{
+                color: $middle_clr;
+            }
+        }
+    }
+    .column3{
+        .social{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            img{
+                width: 2rem;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &:nth-child(2){
+                    width: 1.7rem;
+                }
+                &:nth-child(4){
+                    width: 1.5rem;
+                }
+            }
+        }
+        h3{
+            color: $middle_clr;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+    }
+}
+// Responsive
+@media only screen and (max-width: 1400px){
+    .about{
+        padding-top: 20rem;
+        .aboutLeft{
+            h2{
+                width: 60%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px){
+    
+}
