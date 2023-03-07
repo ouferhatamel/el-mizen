@@ -782,9 +782,6 @@ footer{
                 width: 12rem;
             }
         }
-        .aboutLeft{
-            flex: 1;
-        }
     }
     .services{
         .serviceHeader{
@@ -799,10 +796,10 @@ footer{
         }
         .card{
             aspect-ratio: auto;
-            padding: 3rem;
+            padding: 2rem;
             margin-bottom: 3rem;
             p{
-                font-size: .8rem;
+                font-size: 1rem;
             }
             img{
                 height: 3rem;
@@ -883,7 +880,7 @@ footer{
 }
 @media only screen and (max-width: 415px){
     .hero{
-        margin-top: 7rem;
+        margin-top: 4rem;
         .heroLeft{
             display: none;
         }

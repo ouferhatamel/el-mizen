@@ -877,9 +877,6 @@ footer .column3 h3 {
   .about .aboutRight img {
     width: 12rem;
   }
-  .about .aboutLeft {
-    flex: 1;
-  }
   .services .serviceHeader p {
     width: 100%;
   }
@@ -890,11 +887,11 @@ footer .column3 h3 {
   }
   .services .card {
     aspect-ratio: auto;
-    padding: 3rem;
+    padding: 2rem;
     margin-bottom: 3rem;
   }
   .services .card p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .services .card img {
     height: 3rem;
@@ -964,7 +961,7 @@ footer .column3 h3 {
 }
 @media only screen and (max-width: 415px) {
   .hero {
-    margin-top: 7rem;
+    margin-top: 4rem;
   }
   .hero .heroLeft {
     display: none;
