@@ -10,7 +10,7 @@ header{
     width: 100%;
     height: 100vh;
 }
-nav{
+#navBar{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -50,6 +50,9 @@ nav{
             width: 1.5rem;
         }
     }
+}
+#mobNavBar{
+    display: none;
 }
 .hero{
     display: flex;
@@ -639,8 +642,62 @@ footer{
     footer{
         padding: 3.5rem 3rem;
     }
-    nav{
+    #navBar{
         display: none;
+    }
+    #mobNavBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #mobLogo{
+            img{
+                width: 5rem;
+            }
+        }
+        #hamBtn{
+            img{
+                width: 1.3rem
+            }
+        }
+        .mobMenu{
+            background-color: $dark_clr;
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            color: $light_clr;
+            font-size: 1.5rem;
+            transform: translateY(-100vh);
+            transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+            #close{
+                width: 1.3rem;
+                position: absolute;
+                top: 3.5rem;
+                left: 3.5rem;
+            }
+            .navLinks{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                a{
+                    color: $light_clr;
+                    font-size: 1.5rem;
+                }
+            }
+            .callBtn{
+                display: flex;
+                gap: 1rem;
+                img{
+                    width: 2rem;
+                }
+            }
+        }
     }
     .about{
         padding-top: 0;
@@ -709,6 +766,7 @@ footer{
     }
     .about{
         display: flex;
+        align-items: flex-start;
         flex-direction: column;
         padding-top: 13rem;
         .aboutRight{
@@ -821,5 +879,27 @@ footer{
         }
         
         
+    }
+}
+@media only screen and (max-width: 415px){
+    .hero{
+        margin-top: 7rem;
+        .heroLeft{
+            display: none;
+        }
+    }
+    .about{
+        padding-top: 0;
+    }
+    .double{
+        .contactUs{
+            padding: 2.5rem;
+        }
+        .contactLeft{
+            width: 100%;
+            padding: 0;
+            box-shadow: none;
+            
+        }
     }
 }

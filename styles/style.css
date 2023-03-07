@@ -164,24 +164,24 @@ header {
   height: 100vh;
 }
 
-nav {
+#navBar {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-nav .logo img {
+#navBar .logo img {
   width: 6rem;
 }
-nav .navLinks {
+#navBar .navLinks {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
-nav .navLinks a {
+#navBar .navLinks a {
   position: relative;
   padding-bottom: 0.8rem;
 }
-nav .navLinks a::before {
+#navBar .navLinks a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -191,17 +191,21 @@ nav .navLinks a::before {
   background-color: #e2b668;
   transition: all 0.3s ease;
 }
-nav .navLinks a:hover::before {
+#navBar .navLinks a:hover::before {
   width: 100%;
 }
-nav .callBtn {
+#navBar .callBtn {
   display: flex;
   align-items: flex-end;
   gap: 0.8rem;
   padding-bottom: 0.8rem;
 }
-nav .callBtn img {
+#navBar .callBtn img {
   width: 1.5rem;
+}
+
+#mobNavBar {
+  display: none;
 }
 
 .hero {
@@ -751,8 +755,58 @@ footer .column3 h3 {
   footer {
     padding: 3.5rem 3rem;
   }
-  nav {
+  #navBar {
     display: none;
+  }
+  #mobNavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #mobNavBar #mobLogo img {
+    width: 5rem;
+  }
+  #mobNavBar #hamBtn img {
+    width: 1.3rem;
+  }
+  #mobNavBar .mobMenu {
+    background-color: #15495e;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff7eb;
+    font-size: 1.5rem;
+    transform: translateY(-100vh);
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  #mobNavBar .mobMenu #close {
+    width: 1.3rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 3.5rem;
+  }
+  #mobNavBar .mobMenu .navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #mobNavBar .mobMenu .navLinks a {
+    color: #fff7eb;
+    font-size: 1.5rem;
+  }
+  #mobNavBar .mobMenu .callBtn {
+    display: flex;
+    gap: 1rem;
+  }
+  #mobNavBar .mobMenu .callBtn img {
+    width: 2rem;
   }
   .about {
     padding-top: 0;
@@ -808,6 +862,7 @@ footer .column3 h3 {
   }
   .about {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     padding-top: 13rem;
   }
@@ -905,5 +960,24 @@ footer .column3 h3 {
   }
   footer .column2 li:hover {
     color: #e2b668;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .hero {
+    margin-top: 7rem;
+  }
+  .hero .heroLeft {
+    display: none;
+  }
+  .about {
+    padding-top: 0;
+  }
+  .double .contactUs {
+    padding: 2.5rem;
+  }
+  .double .contactLeft {
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
   }
 }/*# sourceMappingURL=style.css.map */
