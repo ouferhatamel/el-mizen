@@ -5,6 +5,7 @@ body{
     background-color: $light_clr;
     color: $dark_clr;
     font-family: 'cairo';
+    overflow-x: hidden;
 }
 header{
     width: 100%;
@@ -188,8 +189,9 @@ header{
     background-color: $dark_clr;
     background-blend-mode: multiply;
     background-size: cover;
-    height: 100vh;
+    height:fit-content;
     margin-top: 20rem;
+    max-width: 100%;
     .contactUs{
         background-color: $light_clr;
         padding: 4rem 7rem;
@@ -228,8 +230,8 @@ header{
         }
     }
     .testeminies{
-        padding: 7rem;
-        transform: translateY(-75%);
+        padding: 0 7rem;
+        transform: translateY(-55%);
         h2, h5, p{
             color: $light_clr;
         }
@@ -387,24 +389,6 @@ footer{
     }
 }
 // Responsive
-@media only screen and (min-width: 1920px){
-    section, header{
-        padding: 3.5rem 20rem;
-    }
-    footer{
-        padding: 3.5rem 27rem;
-    }
-}
-@media only screen and (max-width: 1400px){
-    .about{
-        padding-top: 20rem;
-        .aboutLeft{
-            h2{
-                width: 60%;
-            }
-        }
-    }
-}
 @media only screen and (max-width: 1200px){
     h1{
         font-size: 2rem;
@@ -459,7 +443,7 @@ footer{
             padding: 4rem;
         }
         .testeminies{
-            padding: 4rem;
+            padding: 0;
         }
     }
     .blog{
@@ -538,102 +522,6 @@ footer{
             }
     }
 }
-@media only screen and (max-width: 992px){
-    h1{
-        font-size: 1.7rem;
-    }
-    h2{
-        font-size: 1.3rem;
-    }
-    p{
-        line-height: 1.8;
-    }
-    nav{
-        font-size: .9rem;
-        .logo{
-            img{
-                width:4.5rem;
-            }
-        }
-        .navLinks{
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-        .callBtn{
-            gap: .5rem;
-            img{
-                width: 1.3rem;
-            }
-        }
-    }
-    .hero{
-        gap: 5rem;
-        .heroRight{
-            h1{
-                width: 100%;
-                margin-bottom: 3rem;
-            }
-            p{
-                width: 100%;
-                font-size: 1rem;
-                margin-bottom: 4rem;
-            }
-        }
-        .circleBgd{
-            width: 16rem;
-            height: 16rem;
-        }
-        img{
-            width: 18rem;
-            left: 2rem
-        }
-    }
-    .about{
-        align-items: center;
-        gap: 4rem;
-        .aboutLeft{
-            h2{
-                width: 100%;
-            }
-            p{
-                width: 100%;
-            }
-            .btns{
-                div{
-                    padding: .3rem 1.2rem;
-                }
-            }
-        }
-    }
-    .services{
-        .serviceHeader{
-            p{
-                width: 70%;
-            }
-        }
-        .serviceList{
-            gap: 1rem;
-        }
-        .card{
-            padding: 1rem;
-            margin-bottom: 1rem;
-            img{
-                height: 2rem;
-            }
-        }
-    }
-    .double{
-        .contactRight{
-            p{
-                width: 100%;
-            }
-        }
-        .contactLeft{
-            width: 50%;
-        }
-    }
-}
 @media only screen and (max-width: 768px){
     
     section, header{
@@ -685,6 +573,7 @@ footer{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                list-style: none;
                 a{
                     color: $light_clr;
                     font-size: 1.5rem;
@@ -696,23 +585,37 @@ footer{
                 img{
                     width: 2rem;
                 }
+                a{
+                    color: $light_clr;
+                }
             }
         }
     }
     .about{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
         padding-top: 0;
-        gap: 2rem;
+        margin-top: 0;
         .aboutRight{
             .outerCircle{
                 width: 15rem;
                 height: 15rem;
             }
             .innerCircle{
-                width: 12rem;
-                height: 12rem;
+                width: 11rem;
+                height: 11rem;
             }
             img{
-                width: 14rem;
+                width: 12rem;
+            }
+        }
+        .aboutLeft{
+            h2{
+                width: 100%;
+            }
+            p{
+                width: 100%;
             }
         }
     }
@@ -758,6 +661,15 @@ footer{
         .heroLeft{
             transform: translateY(-6rem);
         }
+        .heroRight{
+            flex: 1;
+            h1{
+                width: 100%;
+            }
+            p{
+                width: 100%;
+            }
+        }
         img{
             width: 16rem;
             left: 2rem
@@ -768,7 +680,7 @@ footer{
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        padding-top: 13rem;
+        margin-top: 5rem;
         .aboutRight{
             .outerCircle{
                 width: 15rem;
@@ -780,6 +692,14 @@ footer{
             }
             img{
                 width: 12rem;
+            }
+        }
+        .aboutLeft{
+            h2{
+                width: 100%;
+            }
+            p{
+                width: 100%;
             }
         }
     }
@@ -807,9 +727,14 @@ footer{
         }
     }
     .double{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         height: fit-content;
         margin-top: 0;
+        overflow: hidden;
         .contactUs{
+            max-width: 100%;
             flex-direction: column;
             transform: initial;
         }
